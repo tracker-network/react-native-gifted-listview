@@ -12,6 +12,8 @@ var {
   ActivityIndicator,
 } = require('react-native');
 
+PropTypes = require('prop-types');
+
 
 // small helper function which merged two objects into one
 function MergeRecursive(obj1, obj2) {
@@ -61,31 +63,31 @@ var GiftedListView = React.createClass({
   },
 
   propTypes: {
-    customStyles: React.PropTypes.object,
-    initialListSize: React.PropTypes.number,
-    firstLoader: React.PropTypes.bool,
-    pagination: React.PropTypes.bool,
-    refreshable: React.PropTypes.bool,
-    refreshableColors: React.PropTypes.array,
-    refreshableProgressBackgroundColor: React.PropTypes.string,
-    refreshableSize: React.PropTypes.string,
-    refreshableTitle: React.PropTypes.string,
-    refreshableTintColor: React.PropTypes.string,
-    renderRefreshControl: React.PropTypes.func,
-    headerView: React.PropTypes.func,
-    sectionHeaderView: React.PropTypes.func,
-    scrollEnabled: React.PropTypes.bool,
-    withSections: React.PropTypes.bool,
-    onFetch: React.PropTypes.func,
+    customStyles: PropTypes.object,
+    initialListSize: PropTypes.number,
+    firstLoader: PropTypes.bool,
+    pagination: PropTypes.bool,
+    refreshable: PropTypes.bool,
+    refreshableColors: PropTypes.array,
+    refreshableProgressBackgroundColor: PropTypes.string,
+    refreshableSize: PropTypes.string,
+    refreshableTitle: PropTypes.string,
+    refreshableTintColor: PropTypes.string,
+    renderRefreshControl: PropTypes.func,
+    headerView: PropTypes.func,
+    sectionHeaderView: PropTypes.func,
+    scrollEnabled: PropTypes.bool,
+    withSections: PropTypes.bool,
+    onFetch: PropTypes.func,
 
-    paginationFetchingView: React.PropTypes.func,
-    paginationAllLoadedView: React.PropTypes.func,
-    paginationWaitingView: React.PropTypes.func,
-    emptyView: React.PropTypes.func,
-    renderSeparator: React.PropTypes.func,
+    paginationFetchingView: PropTypes.func,
+    paginationAllLoadedView: PropTypes.func,
+    paginationWaitingView: PropTypes.func,
+    emptyView: PropTypes.func,
+    renderSeparator: PropTypes.func,
 
-    rowHasChanged:React.PropTypes.func,
-    distinctRows:React.PropTypes.func,
+    rowHasChanged:PropTypes.func,
+    distinctRows:PropTypes.func,
   },
 
   _setPage(page) { this._page = page; },
